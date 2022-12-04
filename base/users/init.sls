@@ -5,7 +5,6 @@ user_arun_admin:
     - shell: /bin/bash
     - home: /home/arun_admin
     - uid: 10000
-    - gid_from_name: True
     - groups:
         - wheel
 
