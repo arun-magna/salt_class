@@ -9,7 +9,7 @@ user_arun_admin:
     - groups:
         - wheel
 
-arun_key:
+arun_admin_key:
   ssh_auth.present:
     - name: arun_admin
     - user: arun_admin
