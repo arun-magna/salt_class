@@ -5,8 +5,6 @@ user_arun_admin:
     - shell: /bin/bash
     - home: /home/arun_admin
     - uid: 10000
-    - groups:
-        - wheel
 
 arun_admin_key:
   ssh_auth.present:
