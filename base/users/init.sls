@@ -11,3 +11,12 @@ arun_admin_key:
     - name: arun_admin
     - user: arun_admin
     - source: salt://users/keys/arun_admin.pub
+
+{% for user, uid in pillar.get('users', {}).items() %}
+  {{ user }}:
+     user.present:
+       - name: {{ user }}
+       - home: /home/{{ user }}
+       - shell: /bin/bash
+       - uid: {{ uid }}
+  {% endfor %}
